@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Chatbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chatbox {
+      width: 400px;
+      height: 600px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .chatlogs {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .chat {
+      margin-bottom: 15px;
+    }
+
+    .chat.user .message {
+      background: #d1e7dd;
+      text-align: right;
+    }
+
+    .chat.bot .message {
+      background: #e2e3e5;
+      text-align: left;
+    }
+
+    .message {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 75%;
+    }
+
+    .chat-form {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    .chat-form input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .chat-form button {
+      padding: 10px 20px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbox">
+    <div class="chatlogs" id="chatlogs"></div>
+    <div class="chat-form">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const apiKey = "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";
+
+    async function sendMessage() {
+      const input = document.getElementById('userInput');
+      const userText = input.value.trim();
+      if (userText === '') return;
+
+      addChat('user', userText);
+      input.value = '';
+
+      addChat('bot', 'Typing...');
+
+      try {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            model: "gpt-4",
+            messages: [{ role: "user", content: userText }]
+          })
+        });
+
+        const data = await response.json();
+        const botMessage = data.choices[0].message.content.trim();
+
+        updateLastBotMessage(botMessage);
+      } catch (error) {
+        updateLastBotMessage("❌ Error contacting AI.");
+        console.error("ChatGPT Error:", error);
+      }
+    }
+
+    function addChat(sender, text) {
+      const chatlogs = document.getElementById('chatlogs');
+      const chat = document.createElement('div');
+      chat.className = 'chat ' + sender;
+      chat.innerHTML = `<div class="message">${text}</div>`;
+      chatlogs.appendChild(chat);
+      chatlogs.scrollTop = chatlogs.scrollHeight;
+    }
+
+    function updateLastBotMessage(newText) {
+      const chats = document.querySelectorAll('.chat.bot .message');
+      if (chats.length > 0) {
+        chats[chats.length - 1].innerText = newText;
+      }
+    }
+
+    // Enter key support
+    document.getElementById('userInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+</body>
+</html>
