@@ -1,670 +1,219 @@
 <!DOCTYPE html>
-<html lang="my"> <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ပါဠိသိပ္ပံကျောင်းတိုက်</title> <link rel="icon" href="https://placehold.co/32x32/1a202c/ffffff?text=PME" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom font import for 'Inter' */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+<html lang="my">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Light gray background */
-            color: #2d3748; /* Dark text color */
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans Myanmar', Arial, sans-serif;
+      background: #fff9f2;
+      color: white;
+      line-height: 1.6;
+    }
 
-        /* Custom styles for hero image overlay and text */
-        .hero-section {
-            background-image: url('https://placehold.co/1200x600/3182ce/ffffff'); /* Removed text from placeholder image */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            height: 60vh; /* Responsive height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 1rem; /* Add padding for small screens */
-            background-blend-mode: multiply; /* Darken the image */
-        }
+    header {
+      background: linear-gradient(135deg, #ffff00, #0aa502, #ffff00);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 0.75rem; /* Rounded corners */
-        }
+ h1 {
+      font-weight: 700;
+      font-size: 5.123rem;
+      letter-spacing: 0.05em;
+    }
 
-        .hero-content {
-            z-index: 10;
-            max-width: 800px;
-            padding: 1rem;
-        }
+    /* Image border frame */
+    .portrait-frame {
+      border: 14px solid #c7982f;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 0 15px #d1af55;
+      background: linear-gradient(135deg, #e5cc84 50%, #d1af55 50%);
+      max-width: 260px;
+      margin: 0 auto;
+    }
 
-        /* Adjusted font sizes for titles */
-        .header-title {
-            font-size: 1.75rem; /* Smaller for header title */
-            line-height: 1.2;
-        }
-        @media (min-width: 768px) {
-            .header-title {
-                font-size: 2rem; /* Larger on desktop */
-            }
-        }
+    .portrait-frame img {
+      border-radius: 50%;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-        .hero-section-title {
-            font-size: 2.5rem; /* Adjusted for hero section */
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        @media (max-width: 768px) {
-            .hero-section-title {
-                font-size: 1.75rem; /* Adjust font size for smaller screens */
-            }
-        }
+    /* Table styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
+     th,
+    td {
+      border: 2px solid #a67c1b;
+      padding: 0.525rem 0.75rem;
+      font-weight: 600;
+ text-align: center;
+    }
 
-        /* Card styles for various sections */
-        .info-card {
-            background-color: #ffffff;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 1.5rem;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
+    th {
+      background-color: #cca84f;
+      color: #3c2a0e;
+    }
 
-        .info-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
+    td {
+      background-color: #fff7df;
+      color: #5b4a1b;
+    }
 
-        /* Sticky header for better navigation */
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 50; /* Ensure it stays on top of other content */
-        }
+    caption {
+      caption-side: bottom;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #6c5b25;
+    }
 
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 1.75rem 0 1rem;
+      text-align: center;
+      color: #735d17;
+      border-bottom: 2px solid #c8a03c;
+      padding-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
+    .container {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1rem 3rem;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7a6a28;
+      border-top: 1px solid #d9c77b;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.5rem;
+      }
 
-        /* Responsive adjustments for mobile menu */
-        #mobile-menu {
-            display: none; /* Hidden by default */
-        }
-
-        @media (max-width: 768px) {
-            #desktop-menu {
-                display: none; /* Hide desktop menu on small screens */
-            }
-            #mobile-menu {
-                display: block; /* Show mobile menu icon */
-            }
-            #mobile-nav-links {
-                display: none; /* Hidden by default, toggled by JS */
-            }
-        }
-
-        /* Styles for the custom message box and login modal */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-        }
-
-        .modal-box {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            text-align: center;
-            color: #2d3748;
-        }
-
-        .modal-box h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .modal-box p {
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-box button {
-            background-color: #4c51bf;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            transition: background-color 0.2s ease-in-out;
-            cursor: pointer;
-        }
-
-        .modal-box button:hover {
-            background-color: #3b3f9e;
-        }
-        .modal-box input {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 0.5rem;
-            box-sizing: border-box; /* Ensures padding doesn't increase total width */
-        }
-    </style>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, signOut, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"; // Added getDoc
-
-        // Global variables for Firebase instances and user ID
-        window.firebaseApp = null;
-        window.db = null;
-        window.auth = null;
-        window.currentUserId = null;
-        window.isAuthReady = false;
-        window.isAdmin = false; // Admin state variable
-
-        // --- Custom Message Box Function ---
-        function showMessage(title, message, isError = false) {
-            const messageBoxOverlay = document.createElement('div');
-            messageBoxOverlay.className = 'modal-overlay';
-            messageBoxOverlay.innerHTML = `
-                <div class="modal-box">
-                    <h3 class="${isError ? 'text-red-600' : 'text-gray-800'}">${title}</h3>
-                    <p>${message}</p>
-                    <button id="message-box-ok">သိရှိပြီး</button> </div>
-            `;
-            document.body.appendChild(messageBoxOverlay);
-
-            document.getElementById('message-box-ok').addEventListener('click', () => {
-                document.body.removeChild(messageBoxOverlay);
-            });
-        }
-
-        // --- Login Modal Function ---
-        function showLoginModal() {
-            const loginModalOverlay = document.createElement('div');
-            loginModalOverlay.className = 'modal-overlay';
-            loginModalOverlay.id = 'login-modal-overlay';
-            loginModalOverlay.innerHTML = `
-                <div class="modal-box">
-                    <h3>Admin အဖြစ် ဝင်ရောက်ရန်</h3> <input type="email" id="admin-email" placeholder="အီးမေးလ်" value="officer@palisippam.com"> <input type="password" id="admin-password" placeholder="စကားဝှက်" value="palibaka.001"> <div class="flex justify-center space-x-4">
-                        <button id="login-button">ဝင်ရောက်ရန်</button> <button id="cancel-login-button" class="bg-gray-500 hover:bg-gray-600">ဖျက်သိမ်းမည်</button> </div>
-                    <p id="login-error-message" class="text-red-500 mt-4 hidden">လော့ဂ်အင် မအောင်မြင်ပါ။</p> </div>
-            `;
-            document.body.appendChild(loginModalOverlay);
-
-            const emailInput = document.getElementById('admin-email');
-            const passwordInput = document.getElementById('admin-password');
-            const loginErrorMessage = document.getElementById('login-error-message');
-
-            document.getElementById('login-button').addEventListener('click', async () => {
-                const email = emailInput.value;
-                const password = passwordInput.value;
-
-                try {
-                    const userCredential = await signInWithEmailAndPassword(window.auth, email, password);
-                    const user = userCredential.user;
-
-                    // Check if this user is an admin by querying Firestore
-                    const adminDocRef = doc(window.db, 'admin_users', user.uid); // Assuming 'admin_users' is your collection
-                    const adminDocSnap = await getDoc(adminDocRef);
-
-                    if (adminDocSnap.exists()) {
-                        window.isAdmin = true;
-                        updateAdminPanelVisibility();
-                        document.body.removeChild(loginModalOverlay);
-                        showMessage('Admin Mode', 'Admin Mode ကို ဖွင့်လိုက်ပါပြီ။'); const adminToggleButton = document.getElementById('admin-toggle-button');
-                        if (adminToggleButton) {
-                            adminToggleButton.textContent = 'Admin Mode (On)';
-                            adminToggleButton.classList.add('bg-green-600');
-                            adminToggleButton.classList.remove('bg-gray-500');
-                        }
-                        const logoutButton = document.getElementById('logout-button');
-                        if (logoutButton) {
-                            logoutButton.classList.remove('hidden'); // Show logout button on admin login
-                        }
-                    } else {
-                        await signOut(window.auth); // Log out non-admin users
-                        loginErrorMessage.classList.remove('hidden');
-                        loginErrorMessage.textContent = 'Admin အဖြစ် ဝင်ရောက်ခွင့် မရှိပါ။';
-                    }
-
-                } catch (error) {
-                    console.error("Login Error:", error.code, error.message);
-                    loginErrorMessage.classList.remove('hidden');
-                    if (error.code === 'auth/invalid-email') {
-                        loginErrorMessage.textContent = 'အီးမေးလ်ပုံစံ မမှန်ပါ။';
-                    } else if (error.code === 'auth/user-disabled') {
-                        loginErrorMessage.textContent = 'အသုံးပြုသူ အကောင့်ကို ပိတ်ထားပါသည်။';
-                    } else if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
-                        loginErrorMessage.textContent = 'အီးမေးလ် သို့မဟုတ် စကားဝှက် မှားယွင်းနေပါသည်။';
-                    } else {
-                        loginErrorMessage.textContent = 'လော့ဂ်အင် မအောင်မြင်ပါ။';
-                    }
-                }
-            });
-
-            document.getElementById('cancel-login-button').addEventListener('click', () => {
-                document.body.removeChild(loginModalOverlay);
-            });
-        }
-
-        // --- Firebase Initialization ---
-        const initFirebase = async () => {
-            try {
-                // Mandatory global variables provided by the Canvas environment
-                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-                // Using the provided firebaseConfig directly
-                const firebaseConfig = {
-                    apiKey: "AIzaSyBZ5GjBrnvlAJkyxQn6BjNXjSETmo49uHI",
-                    authDomain: "pali-sippam.firebaseapp.com",
-                    projectId: "pali-sippam",
-                    storageBucket: "pali-sippam.firebasestorage.app",
-                    messagingSenderId: "360736326681",
-                    appId: "1:360736326681:web:0268b5aa4b19e3c56e9688",
-                    measurementId: "G-H7W2864LZQ"
-                };
-                const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-                window.firebaseApp = initializeApp(firebaseConfig);
-                window.db = getFirestore(window.firebaseApp);
-                window.auth = getAuth(window.firebaseApp);
-
-                // Authenticate user
-                onAuthStateChanged(window.auth, async (user) => {
-                    if (user) {
-                        window.currentUserId = user.uid;
-                        console.log('Firebase Authenticated as:', user.uid);
-
-                        // Check if the logged-in user is an admin
-                        const adminDocRef = doc(window.db, 'admin_users', user.uid);
-                        const adminDocSnap = await getDoc(adminDocRef);
-                        window.isAdmin = adminDocSnap.exists();
-                        console.log('User is admin:', window.isAdmin);
-
-                    } else {
-                        // Sign in anonymously if no custom token is provided
-                        try {
-                            if (initialAuthToken) {
-                                await signInWithCustomToken(window.auth, initialAuthToken);
-                                window.currentUserId = window.auth.currentUser.uid;
-                                console.log('Signed in with custom token:', window.currentUserId);
-                            } else {
-                                await signInAnonymously(window.auth);
-                                window.currentUserId = window.auth.currentUser.uid;
-                                console.log('Signed in anonymously:', window.currentUserId);
-                            }
-                        } catch (error) {
-                            console.error("Firebase Auth Error:", error);
-                            // Fallback to a random ID if authentication fails
-                            window.currentUserId = crypto.randomUUID();
-                            console.log('Using random user ID due to auth failure:', window.currentUserId);
-                            showMessage('အမှား', 'Firebase အသုံးပြုသူ authentication လုပ်ရာတွင် အမှားဖြစ်ပွားပါသည်။', true); }
-                        window.isAdmin = false; // Ensure isAdmin is false if no user
-                    }
-                    window.isAuthReady = true;
-                    // Removed user ID display: document.getElementById('user-id-display').textContent = `သင်၏အသုံးပြုသူ ID: ${window.currentUserId}`;
-                    initializeListeners(); // Start listening for data once auth is ready
-                    updateAdminPanelVisibility(); // Update visibility after auth ready
-
-                    // Update logout button visibility
-                    const logoutButton = document.getElementById('logout-button');
-                    if (logoutButton) {
-                        if (user) {
-                            logoutButton.classList.remove('hidden');
-                        } else {
-                            logoutButton.classList.add('hidden');
-                        }
-                    }
-                });
-
-            } catch (error) {
-                console.error("Failed to initialize Firebase:", error);
-                showMessage('အမှား', 'အပလီကေးရှင်းတင်ရာတွင် အမှားဖြစ်ပွားပါသည်။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။', true); }
-        };
-
-        // Function to initialize Firestore listeners
-        const initializeListeners = () => {
-            if (!window.isAuthReady || !window.db || !window.currentUserId) {
-                console.warn('Firebase not fully initialized for listeners yet.');
-                return;
-            }
-
-            // --- Statements Listener ---
-            const statementsCollectionRef = collection(window.db, `artifacts/${__app_id}/public/data/statements`);
-            // Order by timestamp in descending order to show newest first
-            const q = query(statementsCollectionRef, orderBy('timestamp', 'desc'));
-
-            onSnapshot(q, (snapshot) => {
-                const statementsList = document.getElementById('statements-list');
-                statementsList.innerHTML = ''; // Clear previous statements
-                if (snapshot.empty) {
-                    statementsList.innerHTML = '<p class="text-gray-600 text-center col-span-full">ကြေညာချက်များ မတင်ရသေးပါ။</p>'; return;
-                }
-                snapshot.forEach(doc => {
-                    const statement = doc.data();
-                    const statementElement = document.createElement('div');
-                    statementElement.className = 'info-card p-4 mb-4';
-                    const timestamp = statement.timestamp ? new Date(statement.timestamp.seconds * 1000).toLocaleString('my-MM') : 'N/A'; // Format timestamp for Myanmar locale
-                    let imageHtml = '';
-                    if (statement.imageUrl) {
-                        imageHtml = `
-                            <div class="mb-4 rounded-lg overflow-hidden">
-                                <img src="${statement.imageUrl}" alt="ကြေညာချက် ပုံ" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';"> </div>
-                        `;
-                    }
-                    statementElement.innerHTML = `
-                        ${imageHtml}
-                        <p class="text-gray-800 text-lg mb-2">${statement.text}</p>
-                        <p class="text-gray-500 text-sm">ပို့စ်တင်သူ: ${statement.userId === window.currentUserId ? 'သင်' : statement.userId}၊ ${timestamp} တွင်</p> `;
-                    statementsList.appendChild(statementElement); // Append to show newest at top (due to orderby('desc'))
-                });
-            }, (error) => {
-                console.error("Error fetching statements:", error);
-                document.getElementById('statements-list').innerHTML = '<p class="text-red-600 text-center col-span-full">ကြေညာချက်များ တင်ရာတွင် အမှားဖြစ်ပွားပါသည်။</p>'; });
-
-            // Note: For Teachers, Students, Classes & Courses, you would add similar onSnapshot listeners here.
-            // For now, they will display static placeholder content.
-        };
-
-        // --- Admin Panel Visibility Toggle ---
-        const updateAdminPanelVisibility = () => {
-            const adminSection = document.getElementById('new-statement-form-section');
-            const adminToggleButton = document.getElementById('admin-toggle-button');
-            if (adminSection) {
-                if (window.isAdmin) {
-                    adminSection.classList.remove('hidden');
-                    adminToggleButton.textContent = 'Admin Mode (On)';
-                    adminToggleButton.classList.add('bg-green-600');
-                    adminToggleButton.classList.remove('bg-gray-500');
-                } else {
-                    adminSection.classList.add('hidden');
-                    adminToggleButton.textContent = 'Admin Mode (Off)';
-                    adminToggleButton.classList.add('bg-gray-500');
-                    adminToggleButton.classList.remove('bg-green-600');
-                }
-            }
-        };
-
-        // --- Add Statement Function ---
-        window.addStatement = async () => {
-            if (!window.isAdmin) {
-                showMessage('ခွင့်ပြုချက်မရှိပါ', 'ကြေညာချက်တင်ရန် Admin အဖြစ် ဝင်ရောက်ရပါမည်။', true); return;
-            }
-            if (!window.isAuthReady || !window.db || !window.currentUserId) {
-                showMessage('Firebase အဆင်သင့်မဖြစ်သေးပါ', 'ကျေးဇူးပြု၍ ခဏစောင့်ပါ။', true); return;
-            }
-            const statementInput = document.getElementById('new-statement-input');
-            const statementImageInput = document.getElementById('new-statement-image-input');
-            const statementText = statementInput.value.trim();
-            const imageUrl = statementImageInput.value.trim();
-
-            if (statementText === '' && imageUrl === '') {
-                showMessage('သတင်းအချက်အလက် မပြည့်စုံပါ', 'ကြေညာချက် စာသား သို့မဟုတ် ပုံလင့်ခ်ကို ထည့်သွင်းပါ။', true); return;
-            }
-
-            try {
-                const statementsCollectionRef = collection(window.db, `artifacts/${__app_id}/public/data/statements`);
-                await addDoc(statementsCollectionRef, {
-                    text: statementText,
-                    imageUrl: imageUrl || null, // Store null if no image URL
-                    userId: window.currentUserId,
-                    timestamp: serverTimestamp()
-                });
-                statementInput.value = ''; // Clear input
-                statementImageInput.value = ''; // Clear image input
-                showMessage('အောင်မြင်စွာ တင်ပို့ပြီးပါပြီ', 'ကြေညာချက်ကို အောင်မြင်စွာ တင်ပို့လိုက်ပါပြီ။'); console.log("Statement added successfully!");
-            } catch (e) {
-                console.error("Error adding statement: ", e);
-                showMessage('အမှား', 'ကြေညာချက်တင်ရာတွင် အမှားဖြစ်ပွားပါသည်။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။', true); }
-        };
-
-        // Initialize Firebase when the window loads
-        window.onload = initFirebase;
-
-        // JavaScript for mobile menu toggle (from previous version, kept)
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.getElementById('menu-button');
-            const mobileNavLinks = document.getElementById('mobile-nav-links');
-            const adminToggleButton = document.getElementById('admin-toggle-button');
-            const logoutButton = document.getElementById('logout-button'); // New logout button
-
-            if (menuButton && mobileNavLinks) {
-                menuButton.addEventListener('click', () => {
-                    mobileNavLinks.classList.toggle('hidden');
-                });
-
-                const mobileLinks = mobileNavLinks.querySelectorAll('a');
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (!mobileNavLinks.classList.contains('hidden')) {
-                            mobileNavLinks.classList.add('hidden');
-                        }
-                    });
-                });
-            }
-
-            // Admin Toggle Button Logic
-            if (adminToggleButton) {
-                adminToggleButton.addEventListener('click', () => {
-                    if (!window.isAdmin) {
-                        showLoginModal(); // Show login modal if not admin
-                    } else {
-                        // If already admin, clicking it should sign out from admin mode (not necessarily Firebase)
-                        // If you want to sign out from Firebase as well, call signOut(window.auth) here.
-                        window.isAdmin = false;
-                        updateAdminPanelVisibility();
-                        showMessage('Admin Login', 'Admin  Login ကို ပိတ်လိုက်ပါပြီ။'); }
-                });
-            }
-
-            // Logout Button Logic (Firebase Sign Out)
-            if (logoutButton) {
-                logoutButton.addEventListener('click', async () => {
-                    try {
-                        await signOut(window.auth);
-                        window.isAdmin = false; // Reset admin status
-                        updateAdminPanelVisibility(); // Hide admin panel
-                        showMessage('ထွက်ပြီးပါပြီ', 'အောင်မြင်စွာ ထွက်ပြီးပါပြီ။');
-                        // No need to hide the button explicitly here, onAuthStateChanged will handle it
-                    } catch (error) {
-                        console.error("Logout Error:", error);
-                        showMessage('အမှား', 'ထွက်ရာတွင် အမှားဖြစ်ပွားပါသည်။', true);
-                    }
-                });
-            }
-        });
-    </script>
+      .portrait-frame {
+        max-width: 200px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-    <header class="bg-white shadow-md py-4 sticky-header rounded-b-xl">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition-colors text-center md:text-left header-title">ပါဠိသိပ္ပံကျောင်း</a> <nav id="desktop-menu" class="hidden md:flex space-x-6">
-                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">ပင်မစာမျက်နှာ</a> <a href="#teachers" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">ဆရာများ</a> <a href="#students" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">ကျောင်းသားများ</a> <a href="#classes" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">အတန်းချိန်များနှင့် ဘာသာရပ်များ</a> <a href="#statements" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">ကြေညာချက်များ</a> <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">ကျွန်ုပ်တို့အကြောင်း</a> <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors rounded-lg px-3 py-2">ဆက်သွယ်ရန်</a> </nav>
-
-            <div id="mobile-menu" class="md:hidden">
-                <button id="menu-button" class="text-gray-700 focus:outline-none focus:text-indigo-600 p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <nav id="mobile-nav-links" class="md:hidden bg-white px-4 pt-2 pb-4 border-t border-gray-200">
-            <a href="#home" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">ပင်မစာမျက်နှာ</a> <a href="#teachers" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">ဆရာများ</a> <a href="#students" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">ကျောင်းသားများ</a> <a href="#classes" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">အတန်းချိန်များနှင့် ဘာသာရပ်များ</a> <a href="#statements" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">ကြေညာချက်များ</a> <a href="#about" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">ကျွန်ုပ်တို့အကြောင်း</a> <a href="#contact" class="block text-gray-700 hover:text-indigo-600 font-medium py-2 px-3 rounded-lg transition-colors">ဆက်သွယ်ရန်</a> </nav>
-    </header>
-
-    <div class="container mx-auto px-4 py-2 text-right text-gray-600 text-sm flex justify-end items-center space-x-4">
-        <button id="admin-toggle-button" class="bg-gray-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:opacity-90 transition-opacity">
-            Admin Mode (Off) </button>
-        <button id="logout-button" class="bg-red-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:opacity-90 transition-opacity hidden">
-            ထွက်ရန် (Logout) </button>
+  <header class="py-6 shadow-md">
+    <div class="container text-center">
+      <h1>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</h1>
     </div>
+  </header>
 
-    <section id="home" class="hero-section my-8 mx-4 rounded-xl shadow-lg">
-        <div class="hero-overlay rounded-xl"></div>
-        <div class="hero-content">
-            <h1 class="hero-section-title">ပါဠိသိပ္ပံကျောင်းတိုက်</h1>
-            <p class="text-lg font-light">ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</p>
-            <a href="#statements" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">နောက်ဆုံး ကြေညာချက်များ ကြည့်ရန်</a> </div>
+  <main class="container mt-8">
+    <section aria-label="Palisippam Monastic Education School">
+      <div class="portrait-frame" role="img" aria-label="Palisippam Monastic Education School">
+        <img src=" logo.png';" />
+      </div>
     </section>
 
-    <main class="container mx-auto px-4 py-8">
-        <section id="teachers" class="mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">သင်ကြားစီမံ ဆရာ၊ ဆရာမများ</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/4c51bf/ffffff?text=👨‍🏫" alt="ဆရာအမှတ်အသား" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဒေါက်တာ ကဝိသေဋ္ဌာလင်္ကာရ</h3>
-                    <p class="text-indigo-600 mb-2">ပဓာနနာယက၊ ကျောင်းအုပ်ဆရာတော်</p>
-                    <p class="text-gray-700 text-sm">ပါဠိသိပ္ပံဘုန်းတော်သင်ပညာရေးကျောင်းတိုက်</p>
-                </div>
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/38a169/ffffff?text=👩‍🏫" alt="သင်ကြား/စီမံ" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဒေါ်ယုယုကြည်(အတန်းပိုင်)</h3>
-                    <p class="text-green-600 mb-2">ဘာသာစုံ</p>
-                    <p class="text-gray-700 text-sm">ပဥ္စမတန်း၊ Grade - 5 ကို သင်ကြားပို့ချသည်</p>
-                </div>
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/ed8936/ffffff?text=🧑‍🏫" alt="သင်ကြား/စီမံ" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဒေါ်မော်မော်နိုင်(အတန်းပိုင်)</h3>
-                    <p class="text-yellow-600 mb-2">ဘာသာစုံ</p>
-                    <p class="text-gray-700 text-sm">စတုတ္ထတန်း၊ Grade - 4 ကို သင်ကြားပို့ချသည်</p>
-                </div>
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/5a67d8/ffffff?text=👨‍🏫" alt="အတန်းပိုင်" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဒေါ်ဝင်းဝါဝါမိုး</h3>
-                    <p class="text-indigo-600 mb-2">ဘာသာစုံ</p>
-                    <p class="text-gray-700 text-sm">တတိယတန်း၊ Grade - 3 ကို သင်ကြားပို့ချသည်</p>
-                </div>
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/2f855a/ffffff?text=👩‍🏫" alt="အတန်းပိုင်" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဒေါ်ဆုမြတ်နိုးနွယ်(ရုံးအကူ)</h3>
-                    <p class="text-green-600 mb-2">ဘာသာစုံ</p>
-                    <p class="text-gray-700 text-sm">ဒုတိယတန်း၊ Grade - 2 ကို သင်ကြားပို့ချသည်</p>
-                </div>
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/f6ad55/ffffff?text=🧑‍🏫" alt="အတန်းပိုင်" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဟိန်းထက်အောင်</h3>
-                    <p class="text-yellow-600 mb-2">ဘာသာစုံ</p>
-                    <p class="text-gray-700 text-sm">ပထမတန်း၊ Grade - 1 ကို သင်ကြားပို့ချသည်</p>
-                </div>
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/805ad5/ffffff?text=👨‍🏫" alt="အတန်းပိုင်" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">ဒေါ်အေးသင်းသင်း</h3>
-                    <p class="text-purple-600 mb-2">ဘာသာစုံ</p>
-                    <p class="text-gray-700 text-sm">သူငယ်တန်း၊ KG ကို သင်ကြားပို့ချသည်</p>
-                </div>
-                
-                <p class="text-gray-600 text-center col-span-full"> (ဆရာများစာရင်းကို ရုံးမှ တိုက်ရိုက်တင်ပါမည်။)</p> </div>
-        </section>
+    <section aria-label="Attendance and signature record"
+      class="mt-12">
+      <h2 class="section-title">အတန်းလိုက် ဘာသာရပ်နှင့် စာသင်ချိန်နေ့ရက်များ မှတ်တမ်း</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>စဉ်</th>
+              <th>နာမည်</th>
+              <th> အတန်းပိုင်</th>
+              <th colspan="6"> စာသင်ချိန်နှင့် နေ့ရက်များ</th>
+ 	</th>
+             
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>တနင်္လာ</th>
+              <th>အင်္ဂါ</th>
+              <th>ဗုဒ္ဓဟူး</th>
+              <th>ကြာသပတေး</th>
+              <th>သောကြာ</th>
+ 	<th> အားကစား/အနုပညာ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>၁</td><td>ဒေါ်ယုယုကြည်</td><td>  Grade - 5</td><td> မြန်မာစာ</td><td>  အင်္ဂလိပ် </td><td>  လူမှုရေး</td><td> ပထဝီ</td><td>သင်္ချာ</td><td>ပန်းချီ</td></tr>
+            <tr><td>၂</td><td>ဒေါ်မော်မော်နိုင်</td><td></td><td></td><td></td><td> မြန်မာစာ</td><td></td><td>သင်္ချာ</td><td>အက</td></tr>
+            <tr><td>၃</td><td>ဒေါ်အေးသင်းသင်း</td><td></td><td></td><td></td><td> သမိုင်း</td><td></td><td>မြန်မာစာ</td><td>အဆို</td></tr>
+            <tr><td>၄</td><td>ဦးကိုကို</td><td></td><td></td><td></td><td> မြန်မာစာ</td><td></td><td>အင်္ဂလိပ် </td><td>ကာယ</td></tr>
+            <tr><td>၅</td><td>ဒေါ်ဝါဆိုဦး</td><td></td><td></td><td></td><td>လူမှုရေး</td><td></td><td> ပထဝီ</td><td>အတီး</td></tr>
+            <tr><td>၆</td><td>ဒေါ်</td><td></td><td></td><td></td><td> အင်္ဂလိပ် </td><td></td><td>မြန်မာစာ</td><td>အရေး</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-        <section id="students" class="mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">ထူးချွန်သော ကျောင်းသားများ</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="info-card text-center">
-                    <img src="https://placehold.co/100x100/667eea/ffffff?text=🧑‍🎓" alt="စာစီစာကုံးထူးချွန်သူ" class="rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">မောင်/မ </h3>
-                    <p class="text-purple-600 mb-2">------ တန်း</p>
-                    <p class="text-gray-700 text-sm">စာစီစာကုံးတွင် ထူးချွန်ပြီး စာဖတ်ခြင်းကို နှစ်သက်သည်။</p>
-                </div>
-                
-                <p class="text-gray-600 text-center col-span-full"> (ထူးချွန်ကျောင်းသားကျောင်းသူများစာရင်းကို webpage ပေါ်တွင် တိုက်ရိုက်တင်ပါမည်။)</p> </div>
-        </section>
+    <section aria-label="Grades and percentages record" class="mt-12">
+      <h2 class="section-title">ကျောင်းသား/သူ စာရင်းမှတ်စုများ</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>စဉ်</th>
+              <th>အတန်း</th>
+              <th colspan="3">၂၀၂၅ - ၂၀၂၆</th>
+              <th colspan="3">ကလေးဉာဏ်ရည်ဉာဏ်သွေး</th>
+              <th colspan="3">ထူးချွန်သည့်ကလေး</th>
+              <th>အတန်းပိုင်</th>
+              <th>ကျောင်းတက် %</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th> ကျား</th>
+              <th>မ</th>
+              <th>စုစုပေါင်း</th>
+              <th>ပုံမှန်</th>
+              <th>သင့်</th>
+              <th>တော်</th>
+              <th>ကျား</th>
+              <th>မ</th>
+              <th>စုစုပေါင်း</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>၁</td><td>KG</td><td>၉</td><td>၁၀</td><td>၁၉</td><td>၉</td><td>၁၂</td><td>-</td><td>-</td><td>-</td><td>-</td><td>ဆရာစိုး</td><td>၁၀၀%</td></tr>
+            <tr><td>၂</td><td>Grade (1)</td><td>၁၀</td><td>၁၃</td><td>၂၃</td><td>၉</td><td>၁၃</td><td>-</td><td>-</td><td> -</td><td> -</td><td>မအေးသင်းသင်း</td><td>၁၀၀%</td></tr>
+            <tr><td>၃</td><td>Grade (2)</td><td>၁၁</td><td>၂၀</td><td>၂၁</td><td>၁၂</td><td>၁၆</td><td>၁</td><td> ၁</td><td>၂</td><td>၃</td><td>ဝါဝါမိုး</td><td>၈၃%</td></tr>
+            <tr><td>၄</td><td>Grade (3)</td><td>၁၇</td><td>၁၀</td><td>၂၇</td><td>၉</td><td>၁၀</td><td>၁</td><td>၁</td><td>၁</td><td>၂</td><td>ဆုမြတ်နိုး</td><td>၈၇%</td></tr>
+            <tr><td>၅</td><td>Grade (4)</td><td>၅</td><td>၁၀</td><td>၁၅</td><td>၇</td><td>၁၁</td><td>၁</td><td>၂</td><td>၂</td><td>၄</td><td>ဒေါ်မော်မော်နိုင်</td><td>၈၇%</td></tr>
+            <tr><td>၆</td><td>Grade (5)</td><td>၇</td><td>၁၁</td><td>၁၈</td><td>၇</td><td>၁၁</td><td>၃</td><td>၃</td><td>၂</td><td>၅</td><td>ဒေါ်ယုယုကြည်</td><td>၁၀၀%</td></tr>
+          </tbody>
+          <caption>ကျောင်းသား/သူ အလိုက် စာရင်းနှင့် တက်ရောက်မှု</caption>
+        </table>
+      </div>
+    </section>
+  </main>
 
-        <section id="classes" class="mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">အတန်းချိန်များနှင့် ဘာသာရပ်များ</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="info-card">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">နေ့စဉ်အချိန်ဇယား၏ အထူးအသားပေးများ</h3> <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li><span class="font-semibold">နံနက် ၈:၀၀ - နံနက် ၉:၀၀:</span> မနက်ခင်း ဝတ်ပြုခြင်းနှင့် တရားထိုင်ခြင်း</li> <li><span class="font-semibold">နံနက် ၉:၀၀ - နံနက် ၁၀:၃၀:</span> ဗုဒ္ဓဘာသာ ဒဿန</li> <li><span class="font-semibold">နံနက် ၁၀:၃၀ - နေ့လည် ၁၂:၀၀:</span> မြန်မာစာပေ</li> <li><span class="font-semibold">နေ့လည် ၁:၀၀ - နေ့လည် ၂:၃၀:</span> သင်္ချာ / သိပ္ပံ</li> <li><span class="font-semibold">နေ့လည် ၂:၃၀ - ညနေ ၄:၀၀:</span> အင်္ဂလိပ်စာ / သမိုင်း</li> </ul>
-                </div>
-                <div class="info-card">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">အဓိက သင်တန်းများ</h3> <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>ပြဌာန်းစာနှင့် အထွေထွေဗဟုသုတ</li> <li>လေ့ကျင့်ခန်းများနှင့် လှူပ်ရှားမှု</li> </li> <li>ကာယလေ့ကျင့်ခန်း</li> <li>ပတ်ဝန်းကျင်ဆိုင်ရာ သင်ကြားမှု</li> </ul>
-                </div>
-                <p class="text-gray-600 text-center col-span-full"> (အသေးစိတ် အတန်းချိန်ဇယားနှင့် သင်တန်းစာရင်းကို ရုံး မှ တိုက်ရိုက်တင်ပါမည်။)</p> </div>
-        </section>
-
-        <section id="statements" class="mb-12">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">လူမှုအသိုင်းအဝိုင်း ကြေညာချက်များနှင့် သတင်းများ</h2> <div id="new-statement-form-section" class="bg-white rounded-xl shadow-lg p-6 mb-8 hidden">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">ကြေညာချက်အသစ် တင်ရန်</h3> <textarea id="new-statement-input" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4" placeholder="ကျောင်းအသိုင်းအဝိုင်းနှင့် မက်ဆေ့ချ် သို့မဟုတ် ကြေညာချက်တစ်ခုကို မျှဝေပါ..."></textarea> <input type="url" id="new-statement-image-input" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4" placeholder="ပုံလင့်ခ် ထည့်သွင်းပါ (ဥပမာ: https://example.com/image.jpg)"> <button onclick="addStatement()" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">ကြေညာချက် တင်ရန်</button> </div>
-
-            <div id="statements-list" class="space-y-6">
-                <p class="text-gray-600 text-center">'ပို့စ် တင်နေပါသည်...</p> </div>
-        </section>
-
-        <section id="about" class="mb-12 info-card">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</h2> <div class="prose max-w-none text-gray-700">
-                <p class="mb-4">ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းသည် ဗုဒ္ဓဘာသာအခြေခံမူများကို အခြေခံ၍ ပြည့်စုံသော ပညာရေးကို ပေးဆောင်ရန် ရည်ရွယ်သည်။ ကျွန်ုပ်တို့သည် လူငယ်လေးများကို လောကီပညာ၊ စီးပွားရေးနှင့် လူမှုရေးပညာ နှစ်မျိုးစလုံးဖြင့် ပြုစုပျိုးထောင်ကာ တာဝန်ယူတတ်သူများ၊ မေတ္တာတရားရှိသူများဖြစ်လာစေရန် ရည်မှန်းသည်။</p> <p class="mb-4">ကျွန်ုပ်တို့၏ သင်ရိုးညွှန်းတမ်းသည် ရိုးရာ ဘုန်းတော်ကြီးကျောင်း ပညာရေးနှင့် ခေတ်မီသော ပညာရပ်များကို ပေါင်းစပ်ထားပြီး ကျွန်ုပ်တို့၏ ကျောင်းသားအားလုံးအတွက် ဘက်စုံဖွံ့ဖြိုးတိုးတက်မှုကို အာမခံပါသည်။ ကျွန်ုပ်တို့သည် ဉာဏ်ပညာကို မြှင့်တင်ရန်၊ ကိုယ်ကျင့်တရား ကောင်းမွန်ရန်နှင့် ဓမ္မအကြောင်းကို နက်နက်နဲနဲ နားလည်ရန် အားပေးသော ပတ်ဝန်းကျင်ကို ဖန်တီးပေးသည်ဟု ယုံကြည်ပါသည်။</p> <p>အရည်အသွေးရှိသော ပညာရေးကို လွယ်ကူစွာရရှိစေရန် ရည်ရွယ်ချက်ဖြင့် တည်ထောင်ခဲ့သော ပရိသိပ္ပံကျောင်းသည် စည်းကမ်း၊ သတိနှင့် ခိုင်မာသော ကိုယ်ကျင့်တရားအခြေခံကို အလေးပေးသော ထူးခြားသည့် သင်ကြားရေး အတွေ့အကြုံကို ပေးခြင်းဖြင့် လူမှုအသိုင်းအဝိုင်းကို ဝန်ဆောင်မှုပေးနေပါသည်။</p> </div>
-        </section>
-
-        <section id="contact" class="mb-12 info-card">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">ဆက်သွယ်ရန်</h2> <div class="text-center text-gray-700">
-                <p class="mb-2"><strong>လိပ်စာ:</strong> [ကျောင်းလိပ်စာ], [မြို့], [ဒေသကြီး], မြန်မာ</p> <p class="mb-2"><strong>ဖုန်း:</strong> +95 XXXXX XXXXX</p> <p class="mb-2"><strong>အီးမေးလ်:</strong> info@pali.upanna.com</p> <p class="mb-2"><strong>ရုံးချိန်:</strong> တနင်္လာနေ့ - သောကြာနေ့၊ နံနက် ၈:၀၀ - ညနေ ၄:၀၀</p> <p class="mt-4">မည်သည့် မေးမြန်းစရာများ သို့မဟုတ် ကျွန်ုပ်တို့၏ကျောင်းအကြောင်း ပိုမိုသိရှိလိုပါက ကျွန်ုပ်တို့ထံ ဆက်သွယ်နိုင်ပါသည်။</p> </div>
-        </section>
-
-        <section class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-lg p-10 text-center text-white my-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">ကျောင်းကြေညာချက်များနှင့် ဆက်သွယ်နေပါ။</h2> <p class="text-lg mb-6">နောက်ဆုံးရသတင်းများ၊ အဖြစ်အပျက်များဆိုင်ရာ အသိပေးချက်များနှင့် သတင်းများကို သင်၏အီးမေးလ်သို့ တိုက်ရိုက်ရယူပါ။</p> <form action="#" method="POST" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
-                <input type="email" placeholder="သင်၏ အီးမေးလ်လိပ်စာ" class="flex-grow p-4 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-200" required> <button type="submit" class="bg-white text-indigo-700 font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105">စာရင်းသွင်းရန်</button> </form>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-8 rounded-t-xl">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-2xl font-bold text-indigo-400">ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းတိုက်</h3> <p class="text-gray-400 text-sm mt-1">ကလေးများကို ပညာရေးပံ့ပိုးကူညီထောက်ပံ့လျက် နိုင်ငံသားကောင်းသမီးရတနာများကို မွေးထုတ်ပေးနေသော ကျောင်းဖြစ်သည်။</p> </div>
-                <nav class="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors"> သင်ကြားရေးဆိုင်ရာမူဝါဒ</a> <a href="#" class="text-gray-300 hover:text-white transition-colors">ကျောင်း စည်းကမ်းချက်များ</a> <a href="#" class="text-gray-300 hover:text-white transition-colors">ဘ/ကကျောင်းများစာရင်း</a> <a href="#" class="text-gray-300 hover:text-white transition-colors">ကျောင်းဝင်ခွင့်ပုံစံ</a> </nav>
-            </div>
-            <div class="border-t border-gray-700 pt-6 text-gray-400">
-                <p>&copy; 2025 Palisippam Monastic Education School, All Rights Reserved.</p> <div class="flex justify-center space-x-4 mt-4">
-                    <a href="#" class="hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3 8h-2v4h2v2h-2v4h-2V10h-2V8h4V5h-4V4h4zm-1 6h-2v-4h2v4z"></path></svg>
-                    </a>
-                    <a href="#" class="hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.34-1.6.56-2.46.66.89-.53 1.56-1.37 1.88-2.38-.83.49-1.75.84-2.73 1.02-1.56-1.66-4.04-1.66-5.6 0-1.22 1.28-1.58 3.12-.91 4.74-4.14-.21-7.8-2.19-10.25-5.2C3.12 8.7 3 9.49 3 10.3c0 2.21 1.13 4.18 2.86 5.33-.69-.02-1.34-.21-1.92-.53v.07c0 2.05 1.46 3.76 3.4 4.14-.35.09-.7.14-1.05.14-.26 0-.51-.03-.76-.07.54 1.76 2.1 3.05 3.96 3.09-1.4 1.1-3.17 1.75-5.11 1.75-.33 0-.66-.02-.99-.06C5.55 21.6 8.04 22 10.74 22c7.42 0 11.47-6.15 11.47-11.47V11c.79-.57 1.47-1.29 2.01-2.09z"></path></svg>
-                    </a>
-                    <a href="#" class="hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 12a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm-4.5-8a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm0 10a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <footer>
+    © 2024 ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း
+  </footer>
 </body>
+
 </html>
+
