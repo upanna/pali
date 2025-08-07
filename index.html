@@ -17,12 +17,25 @@
     header {
       background: linear-gradient(135deg, #ffff00, #0aa502, #ffff00);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .logo {
+      max-width: 100px; /* Adjust logo size to approximately 1 inch */
+      margin-right: 1rem;
     }
 
     h1 {
       font-weight: 700;
       font-size: 1.000rem;
       letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-size: 0.875rem;
+      text-align: center;
     }
 
     /* Image border frame */
@@ -34,13 +47,6 @@
       background: linear-gradient(135deg, #e5cc84 50%, #d1af55 50%);
       max-width: 260px;
       margin: 0 auto;
-    }
-
-    .portrait-frame img {
-      border-radius: 50%;
-      display: block;
-      width: 100%;
-      height: auto;
     }
 
     /* Table styling */
@@ -65,14 +71,6 @@
     td {
       background-color: #fff7df;
       color: #5b4a1b;
-    }
-
-    caption {
-      caption-side: bottom;
-      margin-top: 0.5rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #6c5b25;
     }
 
     .section-title {
@@ -102,6 +100,35 @@
       margin-top: 3rem;
     }
 
+    .contact-form {
+      background-color: #fff7df;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #0aa502;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #0a8f02;
+    }
+
     @media (max-width: 640px) {
       h1 {
         font-size: 1.5rem;
@@ -116,18 +143,20 @@
 
 <body>
   <header class="py-6 shadow-md">
-    <div class="container text-center">
-      <h1>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်အခြေခံပညာမူလတန်းကျောင်း<br>Pāḷisippaṁ Monastic Basic Education Primary School</h1>
+    <img src="logo.png" alt="School Logo" class="logo" />
+    <div class="container text-center flex-grow">
+      <h1>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်အခြေခံပညာမူလတန်းကျောင်း<br>မြို့မ (၁ )ရပ်ကွက်၊ ဘုရားကြီးလမ်း၊ ညောင်လေးပင်မြို့၊ ညောင်လေးပင်ခရိုင်၊ ပဲခူးတိုင်းဒေသကြီး။</h1>
+      <h2>Pāḷisippaṁ Monastic Basic Education Primary School<br>
+        Myoma (1) Ward, Phayargyi Street, Nyaunglaypin Township, Nyaunglaypin District, Bago Region.</h2>
     </div>
-    <h2><center>မြို့မ (၁ )ရပ်ကွက်၊ ဘုရားကြီးလမ်း၊ ညောင်လေးပင်မြို့၊ ညောင်လေးပင်ခရိုင်၊ ပဲခူးတိုင်းဒေသကြီး။<br>
-      Myoma (1) Ward, Phayargyi Street, Nyaunglaypin Township, Nyaunglaypin District, Bago Region.</center></h2>
   </header>
 
   <main class="container mt-8">
-    <section aria-label="Palisippam Monastic Education School">
-      <div class="portrait-frame" role="img" aria-label="Palisippam Monastic Education School">
-        <img src="logo.png" alt="School Logo" />
-      </div>
+    <section aria-label="School History" class="mt-12">
+      <h2 class="section-title">ကျောင်းသမိုင်း</h2>
+      <p>ကျောင်းသည် ပါဠိသိပ္ပံကျောင်းတိုက် ပဓာနနာယကဆရာတော်ကြီး ဘဒ္ဒန္တတေဇိန္ဒ မဟာထေရ်မြတ်က ၁၉၉၅ ခုနှစ်တွင် စတင်တည်ထောင်ခဲ့ပြီး၊ 
+        ဆရာ/ဆရာမ ၅ ဦးဖြင့် စတင်ကာ အခြေခံပညာပေးအဆင့်မှစတင်ကာ ဖွင့်လှစ်ခဲ့သည်။ ကျောင်းသည် သင်ကြားမှုအရည်အချင်းမြင့်မားပြီး၊ ကျောင်းသားများ၏ စိတ်ပိုင်းဆိုင်ရာနှင့် 
+        ရုပ်ပိုင်းဆိုင်ရာ ဖွံ့ဖြိုးတိုးတက်မှုကို အထူးဂရုစိုက်သည်။ </p>
     </section>
 
     <section aria-label="Teacher Profiles" class="mt-12">
@@ -139,45 +168,51 @@
               <th>စဉ်</th>
               <th>အမည်</th>
               <th>ပညာအရည်အချင်း</th>
-              <th>ဘ/က လုပ်သက်တမ်း</th>
+              <th>ဘ/က တာဝန်</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>၁</td>
-              <td>ဒေါ်ယုယုကြည်</td>
-              <td>B.Ed, M.Ed</td>
-              <td> ၃၀ နှစ်</td>
+              <td>ဒေါက်တာ ဘဒ္ဒန္တကဝိသေဋ္ဌာလင်္ကာရ</td>
+              <td> သာသနဓဇဓမ္မာစရိယ၊ ဝိနယဝိဒူ၊ ဒီဃနိကာယဝိဒူ၊ အင်္ဂုတ္တရနိကာယဝိဒူ၊ သံယုတ္တနိကာယဝိဒူ၊  M.A, Ph.D</td>
+              <td> ကျောင်းအုပ်၊ မြို့နယ် ဘ/က ဥက္ကဋ္ဌ</td>
             </tr>
             <tr>
               <td>၂</td>
-              <td>ဒေါ်မော်မော်နိုင်</td>
-              <td>B.A (English)</td>
-              <td>၃၀ နှစ်</td>
+              <td>ဒေါ်ယုယုကြည်</td>
+              <td>B.Ed, M.Ed</td>
+              <td>သင်ကြား/စီမံ၊ ရုံးဌာနမှူး</td>
             </tr>
             <tr>
               <td>၃</td>
-              <td>ဒေါ်ဝင်းဝါဝါမိုး</td>
-              <td>B.A (Law)</td>
-              <td>၅ နှစ်</td>
+              <td>ဒေါ်မော်မော်နိုင်</td>
+              <td>B.A (English)</td>
+              <td>သင်ကြား/စီမံ</td>
             </tr>
             <tr>
               <td>၄</td>
-              <td>ဒေါ်ဆုမြတ်နိုးနွယ်</td>
-              <td>B.A (English)</td>
-              <td>၅ နှစ်</td>
+              <td>ဒေါ်ဝင်းဝါဝါမိုး</td>
+              <td>B.A (Law)</td>
+              <td>သင်ကြား/စီမံ</td>
             </tr>
             <tr>
               <td>၅</td>
+              <td>ဒေါ်ဆုမြတ်နိုးနွယ်</td>
+              <td>B.A (English)</td>
+              <td>သင်ကြား/စီမံ၊ ရုံးစာရေး</td>
+            </tr>
+            <tr>
+              <td>၆</td>
               <td> ဦးဟိန်းထက်အောင်</td>
               <td>B.A (History)</td>
               <td>၅ နှစ်</td>
             </tr>
             <tr>
-              <td>၆</td>
+              <td>၇</td>
               <td> ဒေါ်အေးသင်းသင်း</td>
               <td>B.A (Myanmar)</td>
-              <td>၅ နှစ်</td>
+              <td>သင်ကြား/စီမံ</td>
             </tr>
           </tbody>
         </table>
@@ -224,10 +259,10 @@
               <td>ဒေါ်မော်မော်နိုင်</td>
               <td>Grade - 4</td>
               <td>မြန်မာစာ</td>
-              <td>သင်္ချာ</td>
+              <td>သင်ကြား</td>
               <td>မြန်မာစာ</td>
               <td></td>
-              <td>သင်္ချာ</td>
+              <td>သင်ကြား</td>
               <td>အက</td>
             </tr>
             <tr>
@@ -468,10 +503,4 @@
 </body>
 
 </html>
-
-
-
-
-
-
 
