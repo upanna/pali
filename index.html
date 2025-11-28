@@ -1,84 +1,452 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ပါဠိသိပ္ပံ ဗုဒ္ဓကောလိပ်</title>
-<style>
-body { margin:0; font-family:"Poppins",sans-serif; background:#fff8e1; color:#333; }
-header { text-align:center; background:#800000; color:#FFD700; padding:25px 10px; }
-header h1 { margin:10px 0 5px; }
-nav { background:#c21807; display:flex; justify-content:center; flex-wrap:wrap; }
-nav a { color:#fff; text-decoration:none; padding:14px 22px; font-weight:bold; }
-nav a:hover { background:#a31406; border-radius:4px; }
-section { display:none; padding:50px 20px; text-align:center; max-width:900px; margin:auto; }
-section img { width:45%; border-radius:10px; margin:10px; }
-footer { background:#800000; color:#FFD700; text-align:center; padding:15px; }
-@media(max-width:600px){ section img{ width:90%; } nav a{ flex:1 0 100%; text-align:center; } }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans Myanmar', Arial, sans-serif;
+      background: #fff9f2;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffff00, #0aa502, #ffff00);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .logo {
+      max-width: 150px; /* Adjust logo size to be larger */
+      margin-right: 1rem;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 1.000rem;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 0.875rem;
+      text-align: center;
+      color: black;
+    }
+
+
+    /* Image border frame */
+    .portrait-frame {
+      border: 14px solid #c7982f;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 0 15px #d1af55;
+      background: linear-gradient(135deg, #e5cc84 50%, #d1af55 50%);
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    /* Table styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 2px solid #a67c1b;
+      padding: 0.525rem 0.75rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    th {
+      background-color: #cca84f;
+      color: #3c2a0e;
+    }
+
+    td {
+      background-color: #fff7df;
+      color: #5b4a1b;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 1.75rem 0 1rem;
+      text-align: center;
+      color: #735d17;
+      border-bottom: 2px solid #c8a03c;
+      padding-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+
+    .container {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1rem 3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7a6a28;
+      border-top: 1px solid #d9c77b;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    .contact-form {
+      background-color: #fff7df;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #0aa502;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #0a8f02;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .portrait-frame {
+        max-width: 200px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="py-6 shadow-md">
+    <img src="logo.png" alt="School Logo" class="logo" />
+    <div class="container text-center flex-grow">
+      <h1>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်<br>အခြေခံပညာမူလတန်းကျောင်း</h1>
+      <h2>Pāḷisippaṁ Monastic Basic Education Primary School</h2>
+    </div>
+  </header>
 
-<header>
-<h1>ပါဠိသိပ္ပံ ဗုဒ္ဓကောလိပ်</h1>
-<p>Established BE 2563 / CE 2019</p>
-</header>
+  <main class="container mt-8">
+    <section aria-label="School History" class="mt-12">
+      <h2 class="section-title">ကျောင်းသမိုင်း</h2>
+      <h3>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်အခြေခံပညာမူလတန်းကျောင်းသည် ယခင် ပါဠိသိပ္ပံကျောင်းတိုက် ပဓာနနာယကဆရာတော်ကြီး ဘဒ္ဒန္တတေဇိန္ဒ မဟာထေရ်မြတ်က 
+        ၁၉၉၅ ခုနှစ်တွင် သင်ကြား/စီမံ ဆရာ/ဆရာမ ၅ ဦး၊ ကျောင်းသား/သူ ၃၈ ဦးဖြင့် အခြေခံပညာမူလတန်းအဆင့် စတင်ကာ ဖွင့်လှစ်တည်ထောင်ခဲ့ပါသည်။ 
+        ကျောင်းဖွင့်လှစ်ရခြင်း ရည်ရွယ်ချက်မှာ ပညာသင်အရွယ် ကလေးတိုင်း အခက်အခဲမရှိ အခမဲ့ပညာသင်ယူနိုင်စေရန်နှင့် လူမျိုး ဘာသာ သာသနာအကျိုးကို 
+        သည်ပိုးဆောင်ရွက်စေနိုင်ပြီး နိုင်ငံ သားကာင်းသမီးရတနာများ ပေါ်ထွက်လာစေရန် ဖြစ်သည်။ ထို့အပြင် ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်အခြေခံပညာမူလတန်းကျောင်းသည် 
+        သင်ကြားမှုအရည်အချင်းမြင့်မားပြီး ကျောင်းသားများ၏ စိတ်ပိုင်းဆိုင်ရာနှင့် ရုပ်ပိုင်းဆိုင်ရာ ဖွံ့ဖြိုးတိုးတက်မှုကို အထူးဂရုစိုက်သည်။ </h3>
+    </section>
+  
+<section aria-label="Teacher Profiles" class="mt-12">
+      <h2 class="section-title">ဆရာ/ဆရာမများ၏ ပညာအရည်အချင်းနှင့်တာဝန်</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>စဉ်</th>
+              <th>အမည်</th>
+              <th>ပညာအရည်အချင်း</th>
+              <th>ဘ/က တာဝန်</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>၁</td>
+              <td>ဒေါက်တာ ဘဒ္ဒန္တကဝိသေဋ္ဌာလင်္ကာရ</td>
+              <td> သာသနဓဇဓမ္မာစရိယ၊ သဒ္ဓမ္မဇောတိပါလဓမ္မာစရိယ၊ ဝိနယဝိဒူ၊ ဒီဃနိကာယဝိဒူ၊ အင်္ဂုတ္တရနိကာယဝိဒူ၊ မဇ္ဈိမနိကာယဝိဒူ၊  M.A, Ph.D</td>
+              <td> ကျောင်းအုပ်၊ မြို့နယ် ဘ/က ဥက္ကဋ္ဌ</td>
+            </tr>
+            <tr>
+              <td>၂</td>
+              <td>ဒေါ်ယုယုကြည်</td>
+              <td>B.Ed, M.Ed</td>
+              <td>သင်ကြား/စီမံ၊ ရုံးဌာနမှူး</td>
+            </tr>
+            <tr>
+              <td>၃</td>
+              <td>ဒေါ်မော်မော်နိုင်</td>
+              <td>B.A (English)</td>
+              <td>သင်ကြား/စီမံ</td>
+            </tr>
+            <tr>
+              <td>၄</td>
+              <td>ဒေါ်ဝင်းဝါဝါမိုး</td>
+              <td>B.A (Law)</td>
+              <td>သင်ကြား/စီမံ</td>
+            </tr>
+            <tr>
+              <td>၅</td>
+              <td>ဒေါ်ဆုမြတ်နိုးနွယ်</td>
+              <td>B.A (English)</td>
+              <td>သင်ကြား/စီမံ၊ ရုံးစာရေး</td>
+            </tr>
+            <tr>
+              <td>၆</td>
+              <td> ဦးဟိန်းထက်အောင်</td>
+              <td>B.A (History)</td>
+              <td>သင်ကြား/စီမံ</td>
+            </tr>
+            <tr>
+              <td>၇</td>
+              <td> ဒေါ်အေးသင်းသင်း</td>
+              <td>B.A (Myanmar)</td>
+              <td>သင်ကြား/စီမံ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<nav>
-<a href="#" data-section="home">Home</a>
-<a href="#" data-section="about">About</a>
-<a href="#" data-section="class">Class</a>
-<a href="#" data-section="post">Post</a>
-<a href="#" data-section="radio">Radio</a>
-<a href="#" data-section="tv">TV</a>
-<a href="#" data-section="contact">Contact</a>
-</nav>
+    <section aria-label="Attendance and signature record" class="mt-12">
+      <h2 class="section-title">ဘာသာရပ်အလိုက် ထူးချွန်သည့်အတန်းများ မှတ်တမ်း</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>စဉ်</th>
+              <th>ဘာသာရပ်ထူးချွန်</th>
+              <th> KG</th>
+              <th>Grade - 1</th>
+              <th>Grade - 2</th>
+              <th>Grade - 3</th>
+              <th>Grade - 4</th>
+              <th>Grade -5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>၁</td>
+              <td>မြန်မာ</td>
+              <td> ၃</td>
+              <td>၁</td>
+              <td>၂</td>
+              <td>၄</td>
+              <td>၃</td>
+              <td>၂</td>
+            </tr>
+            <tr>
+              <td>၂</td>
+              <td>အင်္ဂလိပ်</td>
+              <td>၄</td>
+              <td>၂</td>
+              <td>၄</td>
+              <td>၆</td>
+              <td>၁</td>
+              <td>၆</td>
+            </tr>
+            <tr>
+              <td>၃</td>
+              <td> သင်္ချာ</td>
+              <td>၂</td>
+              <td>၂</td>
+              <td>၁</td>
+              <td>၂</td>
+              <td>၃</td>
+              <td>၂</td>
+            </tr>
+            <tr>
+              <td>၄</td>
+              <td>ပထဝီ</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>၃</td>
+              <td>၄</td>
+              <td>၂</td>
+            </tr>
+            <tr>
+              <td>၅</td>
+              <td>သမိုင်း</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>၂</td>
+              <td>၁</td>
+              <td>၂</td>
+            </tr>
+            <tr>
+              <td>၆</td>
+              <td>သိပ္ပံ</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>၂</td>
+              <td>၁</td>
+              <td>၂</td>
+            </tr>
+<tr>
+              <td>၇</td>
+              <td>ကာယ</td>
+              <td></td>
+              <td>၃</td>
+              <td>၄</td>
+              <td>၂</td>
+              <td>၂</td>
+              <td>၂</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<section id="home">
-<h2>Welcome to Palisippam Buddhist College</h2>
-<p>Our college provides a peaceful environment where monks and laymen study together.</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Bhikkhu_students_in_classroom.jpg" alt="Monks in classroom">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Buddhist_students_studying_together.jpg" alt="Students learning">
-</section>
+    <section aria-label="Grades and percentages record" class="mt-12">
+      <h2 class="section-title">ကျောင်းသား/သူများ၏ လစဉ်မှတ်တမ်း</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>          
+            <tr>
+              <th>စဉ်</th>
+              <th>အတန်း</th>
+              <th>ကျား</th>
+              <th>မ</th>
+              <th>စုစုပေါင်း</th>
+ </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>၁</td>
+              <td>KG</td>
+              <td>၅</td>
+              <td>၈</td>
+              <td>၁၃</td>                   
+            </tr>
+            <tr>
+              <td>၂</td>
+              <td>Grade (1)</td>
+              <td>၁၀</td>
+              <td>၅</td>
+              <td>၁၅</td>                        
+            </tr>
+            <tr>
+              <td>၃</td>
+              <td>Grade (2)</td>
+              <td>၁၁</td>
+              <td>၉</td>
+              <td>၂၀</td>             
+            </tr>
+            <tr>
+              <td>၄</td>
+              <td>Grade (3)</td>
+              <td>၁၄</td>
+              <td>၁၀</td>
+              <td>၂၄</td>          
+            </tr>
+            <tr>
+              <td>၅</td>
+              <td>Grade (4)</td>
+              <td>၉</td>
+              <td>၁၀</td>
+              <td>၁၉</td>                         
+            </tr>
+            <tr>
+              <td>၆</td>
+              <td>Grade (5)</td>
+              <td>၃</td>
+              <td>၈</td>
+              <td>၁၁</td>                           
+            </tr>
+ 	<tr>
+              <td colspan=" 2">အတန်းစုံ  ကျား/မ စုစုပေါင်း</td>
+              <td>၅၂</td>
+              <td>၅၀</td>
+              <td>၁၀၂</td>                            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<section id="about"><h2>About the College</h2><p>Founded in 2019, the college nurtures spiritual and intellectual growth.</p></section>
-
-<section id="class"><h2>Class Schedule</h2><ul><li>English Class</li><li>Computer Class</li><li>Dhamma Class</li></ul></section>
-
-<section id="post"><h2>Post Announcement</h2><p>Latest announcements displayed here.</p></section>
-
-<section id="radio"><h2>Radio</h2>
-<audio controls autoplay>
-<source src="https://stream.zeno.fm/nv7i41tz04mtv" type="audio/mpeg">
-</audio>
-</section>
-
-<section id="tv"><h2>TV / Zoom</h2>
-<iframe height="330" src="https://www.ustream.tv/embed/17074538?html5ui=1" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<section id="contact"><h2>Contact</h2><p>📍 ပါဠိသိပ္ပံဗုဒ္ဓကောလိပ်, မြို့မ ၁ ရပ်ကွက်၊ ဘုရားကြီးလမ်း...</p></section>
-
-<footer>© 2025 Palisippam Buddhist College | All Rights Reserved.</footer>
-
-<script>
-// hide all sections
-const sections = document.querySelectorAll("section");
-function hideAll(){ sections.forEach(s=>s.style.display="none"); }
-// show specific section
-function showSection(id){ hideAll(); document.getElementById(id).style.display="block"; }
-// menu click
-document.querySelectorAll('nav a').forEach(a=>{
-  a.addEventListener('click', e=>{
-    e.preventDefault();
-    const sec = a.getAttribute('data-section');
-    showSection(sec);
-  });
-});
-// show home by default
-showSection('home');
-</script>
-
+    <section aria-label="Donor Records" class="mt-12">
+      <h2 class="section-title">အလှူရှင် မှတ်တမ်း</h2>
+      <div class="overflow-x-auto">
+        <table>
+          <thead>
+            <tr>
+              <th>စဉ်</th>
+              <th>အမည်</th>
+              <th>ရက်စွဲ</th>
+              <th>လှူသည့်အမျိုးအစား</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+              <td>၁</td>
+              <td> ဗိုလ်ချုပ်စောလွင် မိသားစု</td>
+              <td>2024-03-05</td>
+              <td>အစားအစာနှင့် အဝတ်အထည်</td>
+            </tr>
+            <tr>
+              <td>၄</td>
+              <td>ဦးတင်ဦး + ဒေါ်ခင်မိုးသူ မိသားစု</td>
+              <td>2024-04-20</td>
+              <td>မွေးနေ့အလှူတော်</td>
+            </tr>
+            <tr>
+              <td>၁</td>
+              <td> မောင်ဟိန်းထက်အောင်</td>
+              <td>2025-08-5</td>
+              <td>မွေးနေ့အလှူတော်</td>
+            </tr>
+            <tr>
+              <td>၂</td>
+              <td>ဒေါ်ဝင်းဝါဝါမိုး</td>
+              <td>2025-08-6</td>
+              <td> အသက် ၄၁ နှစ်ပြည့်မွေးနေ့အလှူ</td>
+            </tr>
+            <tr>
+              <td>၅</td>
+              <td>ဦးဆန်းလွင် မိသားစု</td>
+              <td>2025-05-15</td>
+              <td>ခေါက်ဆွဲကြော်</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+    </section>
+  </main>
+<h3>မြို့မ (၁ )ရပ်ကွက်၊ ဘုရားကြီးလမ်း၊ ညောင်လေးပင်မြို့၊ ညောင်လေးပင်ခရိုင်၊ ပဲခူးတိုင်းဒေသကြီး။<br>
+        Myoma (1) Ward, Phayargyi Street, Nyaunglaypin Township, Nyaunglaypin District, Bago Region.<br>
+  Email: palibakaedu@gmail.com; Fax & Ph: +95-933913388 ; Website: https://pali.upanna.com.</h3>
+  <footer>
+    © 2024 ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း
+  </footer>
 </body>
+
 </html>
+
+
+
+
+
+
 
