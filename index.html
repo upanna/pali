@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ပါဠိသိပ္ပံဘ/က</title>
+  <title>ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -36,40 +36,16 @@
       font-weight: 700;
       color: #5b4510;
     }
-
-    /* Responsive table for small screen */
-    @media (max-width: 640px) {
-      .table-responsive {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      table {
-        width: 100%;
-      }
-
-      table td,
-      table th {
-        padding: 8px;
-        font-size: 0.875rem;
-      }
-
-      /* Adjust font size on smaller screens */
-      h1,
-      h2,
-      h3 {
-        font-size: 1.2rem;
-      }
-    }
   </style>
 
 </head>
 
 <body>
+
   <!-- HEADER -->
-  <header class="py-6 shadow-md bg-gradient-to-r from-yellow-300 via-green-600 to-yellow-300 flex items-center justify-center">
+  <header class="py-6 shadow-md bg-gradient-to-r from-yellow-300 via-green-600 to-yellow-300 flex items-center">
     <img src="logo.png" alt="School Logo" class="w-32 md:w-40 mr-4" />
-    <div class="text-center text-white drop-shadow">
+    <div class="flex-grow text-center text-white drop-shadow">
       <h1 class="text-lg md:text-2xl font-bold leading-tight">
         ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်<br>အခြေခံပညာမူလတန်းကျောင်း
       </h1>
@@ -80,14 +56,16 @@
   </header>
 
   <main class="container mx-auto px-4 py-10">
+
     <!-- HISTORY SECTION -->
     <section>
       <h2 class="text-xl font-bold text-center text-yellow-700 border-b-2 border-yellow-500 pb-1">
         ကျောင်းသမိုင်း
       </h2>
+
       <p class="mt-6 text-gray-800 text-md leading-relaxed">
         ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်အခြေခံပညာမူလတန်းကျောင်းသည် ယခင် ပါဠိသိပ္ပံကျောင်းတိုက်
-        ပဓာနနာယကဆရာတော်ကြီး ဘဒ္ဒန္တတေဇိန်ဒ မဟာထေရ်မြတ်က ၁၉၉၅ ခုနှစ်တွင်
+        ပဓာနနာယကဆရာတော်ကြီး ဘဒ္ဒန္တတေဇိန္ဒ မဟာထေရ်မြတ်က ၁၉၉၅ ခုနှစ်တွင်
         သင်ကြား/စီမံ ဆရာ/ဆရာမ ၅ ဦး၊ ကျောင်းသား/သူ ၃၈ ဦးဖြင့် အခြေခံပညာမူလတန်းအဆင့်
         စတင်ကာ ဖွင့်လှစ်တည်ထောင်ခဲ့ပါသည်။ ကျောင်းဖွင့်လှစ်ရခြင်း ရည်ရွယ်ချက်မှာ
         ပညာသင်အရွယ် ကလေးတိုင်း အခက်အခဲမရှိ အခမဲ့ပညာသင်ယူနိုင်စေရန်နှင့်
@@ -102,7 +80,7 @@
         ဆရာ/ဆရာမများ၏ ပညာအရည်အချင်းနှင့် တာဝန်
       </h2>
 
-      <div class="overflow-x-auto mt-6 shadow-md rounded-xl bg-white p-4 table-responsive">
+      <div class="overflow-x-auto mt-6 shadow-md rounded-xl bg-white p-4">
         <table class="w-full text-center text-gray-800">
           <thead>
             <tr class="tbl-head">
@@ -123,9 +101,9 @@
 
             <tr class="tbl-row">
               <td class="py-3">၂</td>
-              <td>အရှင်တေဇဝန္တ</td>
+              <td>ဘဒ္ဒန္တတေဇဝန္တ</td>
               <td>ဓမ္မာစရိယ</td>
-              <td>ဘ/က ရုံးတာဝန်ခံ</td>
+              <td>ပါဠိ ဘ/က ရုံးတာဝန်ခံ</td>
             </tr>
 
             <tr class="tbl-row">
@@ -139,7 +117,7 @@
               <td class="py-3">၄</td>
               <td>ဒေါ်မော်မော်နိုင်</td>
               <td>B.A (English)</td>
-              <td>သင်ကြား/စီမံ(ကြီးကြပ်)</td>
+              <td>သင်ကြား/စီမံ</td>
             </tr>
 
             <tr class="tbl-row">
@@ -180,7 +158,7 @@
         ဘာသာရပ်အလိုက် ထူးချွန်သည့်အတန်းများ မှတ်တမ်း
       </h2>
 
-      <div class="overflow-x-auto mt-6 shadow-md rounded-xl bg-white p-4 table-responsive">
+      <div class="overflow-x-auto mt-6 shadow-md rounded-xl bg-white p-4">
         <table class="w-full text-center">
 
           <thead>
@@ -197,6 +175,7 @@
           </thead>
 
           <tbody>
+
             <tr class="tbl-row">
               <td class="py-3">၁</td>
               <td>မြန်မာ</td>
@@ -244,7 +223,161 @@
       </div>
     </section>
 
+    <!-- STUDENT MONTHLY RECORD -->
+    <section class="mt-12">
+      <h2 class="text-xl font-bold text-center text-yellow-700 border-b-2 border-yellow-500 pb-1">
+        ကျောင်းသား/သူများ၏ လစဉ်မှတ်တမ်း
+      </h2>
+
+      <div class="overflow-x-auto mt-6 shadow-md rounded-xl bg-white p-4">
+
+        <table class="w-full text-center text-gray-800">
+
+          <thead>
+            <tr class="tbl-head">
+              <th class="py-3">အတန်း</th>
+              <th>ကျား</th>
+              <th>မ</th>
+              <th>စုစုပေါင်း</th>
+              <th>အတန်းပိုင်</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr class="tbl-row">
+              <td class="py-3">KG</td>
+              <td>၅</td>
+              <td>၈</td>
+              <td>၁၃</td>
+              <td>ဒေါ်အေးသင်းသင်း</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">Grade (1)</td>
+              <td>၁၀</td>
+              <td>၅</td>
+              <td>၁၅</td>
+              <td>ဦးဟိန်းထက်အောင်</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">Grade (2)</td>
+              <td>၁၁</td>
+              <td>၉</td>
+              <td>၂၀</td>
+              <td>ဒေါ်ဝင်းဝါဝါမိုး</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">Grade (3)</td>
+              <td>၁၄</td>
+              <td>၁၀</td>
+              <td>၂၄</td>
+              <td>ဒေါ်ဆုမြတ်နိုးနွယ်</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">Grade (4)</td>
+              <td>၉</td>
+              <td>၁၀</td>
+              <td>၁၉</td>
+              <td>ဒေါ်မော်မော်နိုင်</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">Grade (5)</td>
+              <td>၃</td>
+              <td>၈</td>
+              <td>၁၁</td>
+              <td>ဒေါ်ယုယုကြည်</td>
+            </tr>
+
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td class="py-3">စုစုပေါင်း</td>
+              <td>၅၂</td>
+              <td>၅၀</td>
+              <td>၁၀၂</td>
+              <td>အတန်းပိုင် ၆ ဦး</td>
+            </tr>
+          </tfoot>
+
+        </table>
+
+      </div>
+    </section>
+
+    <!-- DONOR SECTION -->
+    <section class="mt-12">
+      <h2 class="text-xl font-bold text-center text-yellow-700 border-b-2 border-yellow-500 pb-1">
+        အလှူရှင် မှတ်တမ်း
+      </h2>
+
+      <div class="overflow-x-auto mt-6 shadow-md rounded-xl bg-white p-4">
+
+        <table class="w-full text-center">
+          <thead>
+            <tr class="tbl-head">
+              <th class="py-3">စဉ်</th>
+              <th>အမည်</th>
+              <th>ရက်စွဲ</th>
+              <th>လှူသည့်အမျိုးအစား</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr class="tbl-row">
+              <td class="py-3">၁</td>
+              <td>ဗိုလ်ချုပ်စောလွင် မိသားစု</td>
+              <td>2024-03-05</td>
+              <td>အစားအစာ၊ အဝတ်အထည်</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">၄</td>
+              <td>ဦးတင်ဦး + ဒေါ်ခင်မိုးသူ</td>
+              <td>2024-04-20</td>
+              <td>မွေးနေ့အလှူတော်</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">၁</td>
+              <td>မောင်ဟိန်းထက်အောင်</td>
+              <td>2025-08-05</td>
+              <td>မွေးနေ့အလှူတော်</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">၂</td>
+              <td>ဒေါ်ဝင်းဝါဝါမိုး</td>
+              <td>2025-08-06</td>
+              <td>အသက် ၄၁ ပြည့်မွေးနေ့အလှူ</td>
+            </tr>
+
+            <tr class="tbl-row">
+              <td class="py-3">၅</td>
+              <td>ဦးဆန်းလွင် မိသားစု</td>
+              <td>2025-05-15</td>
+              <td>ခေါက်ဆွဲကြော်</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
   </main>
+
+  <h3 class="text-center text-gray-700 mt-10 leading-relaxed">
+    မြို့မ (၁) ရပ်ကွက်၊ ဘုရားကြီးလမ်း၊ ညောင်လေးပင်မြို့၊ ပဲခူးတိုင်းဒေသကြီး<br>
+    Email: palibakaedu@gmail.com — Ph: +95-933913388<br>
+    Website: https://pali.upanna.com
+  </h3>
 
   <footer class="text-center text-gray-600 py-6 mt-10 border-t border-yellow-300">
     © 2024 ပါဠိသိပ္ပံဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း
