@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build Webview Android APK
 
 on:
   push:
@@ -19,20 +19,23 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          flutter-version: '3.19.x'
-          channel: 'stable'
+          node-version: '20'
 
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build Release APK
-        run: flutter build apk --release --no-tree-shake-icons
+      - name: Install Capacitor & Build Android
+        run: |
+          npm init -y
+          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npx cap init "Pali App" "com.pali.app" --web-dir .
+          npx cap add android
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: baka-manage-release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: pali-release-apk
+          path: android/app/build/outputs/apk/release/app-release-unsigned.apk
